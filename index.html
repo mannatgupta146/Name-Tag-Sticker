@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name Tag Stickers</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Tag Stickers</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- Input field and button for adding new names -->
+  <div class="input-container">
+    <input type="text" id="nameInput" placeholder="Enter your name" aria-label="Name input field">
+    <button id="addNameBtn" title="Click to add a name">Add Name</button>
+  </div>
 
-    <!-- Input for adding names -->
-    <div class="input-container">
-        <input type="text" id="nameInput" placeholder="Enter your name">
-        <button id="addNameBtn">Add Name</button>
+  <!-- Template for generating stickers dynamically -->
+  <template id="stickerTemplate">
+    <div class="container">
+      <div class="heading">
+        <div class="text">Hii</div>
+        <div class="subText">My name is</div>
+      </div>
+      <div class="name"></div>
+      <div class="bottom"></div>
     </div>
+  </template>
 
-    <!-- Template for stickers -->
-    <template>
-        <div class="container">
-            <div class="heading">
-                <div class="text">Hii</div>
-                <div class="subText">My name is</div>
-            </div>
-            <div class="name"></div>
-            <div class="bottom"></div>
-        </div>
-    </template>
+  <!-- Wrapper to hold generated stickers -->
+  <div class="wrapper"></div>
 
-    <!-- Wrapper to hold stickers -->
-    <div class="wrapper"></div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
